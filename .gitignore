@@ -173,6 +173,5 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
-
 /ui/admin-app/node_modules/
 /ui/admin-app/build/
