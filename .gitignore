@@ -172,3 +172,8 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+/backend/auth_project/auth_project/settings.py
+
+/ui/admin-app/node_modules/
+/ui/admin-app/build/
