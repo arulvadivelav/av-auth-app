@@ -50,3 +50,12 @@ npm install
 
 npm start
 ```
+
+## Photos
+
+![image](https://github.com/user-attachments/assets/e65f813f-6a05-42a5-b6dd-9c0c03b20ece)
+![image](https://github.com/user-attachments/assets/2705d530-adfc-4c9a-9845-07c471d45928)
+![image](https://github.com/user-attachments/assets/8a2f7f5a-5196-44ee-9627-1afff6b7d555)
+![image](https://github.com/user-attachments/assets/21057c11-4e07-4882-932f-41d74a6a6c09)
+![image](https://github.com/user-attachments/assets/f9e3467a-e236-42f6-9e69-b631c1806332)
+
