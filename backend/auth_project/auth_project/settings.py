@@ -77,6 +77,7 @@ WSGI_APPLICATION = "auth_project.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+print(30*"a", config('USER'))
 DATABASES = {
     'default': dj_database_url.config(
         default=f"postgres://{config('USER')}:{config('PASSWORD')}@{config('HOST')}:{config('PORT')}/{config('NAME')}",
