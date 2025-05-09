@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 from decouple import config
+import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -76,14 +78,22 @@ WSGI_APPLICATION = "auth_project.wsgi.application"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": config('NAME'),
-        "USER": config('USER'),
-        "PASSWORD": config('PASSWORD'),
-        "HOST": config('HOST'),
-        "PORT": config('PORT')}
+    'default': dj_database_url.config(
+        default=f"postgres://{config('USER')}:{config('PASSWORD')}@{config('HOST')}:{config('PORT')}/{config('NAME')}",
+        conn_max_age=600,       # Keep connection alive for 10 mins
+        ssl_require=True        # Enforce secure encrypted connection
+    )
 }
+
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": config('NAME'),
+#         "USER": config('USER'),
+#         "PASSWORD": config('PASSWORD'),
+#         "HOST": config('HOST'),
+#         "PORT": config('PORT')}
+# }
 
 
 # Password validation
