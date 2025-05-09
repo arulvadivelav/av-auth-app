@@ -77,10 +77,10 @@ WSGI_APPLICATION = "auth_project.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-print(30*"a", config('USER'))
+print(30*"a", config('DATABASE_USER'))
 DATABASES = {
     'default': dj_database_url.config(
-        default=f"postgres://{config('USER')}:{config('PASSWORD')}@{config('HOST')}:{config('PORT')}/{config('NAME')}",
+        default=f"postgres://{config('DATABASE_USER')}:{config('DATABASE_PASSWORD')}@{config('DATABASE_HOST')}:{config('DATABASE_PORT')}/{config('DATABASE_NAME')}",
         conn_max_age=600,       # Keep connection alive for 10 mins
         ssl_require=True        # Enforce secure encrypted connection
     )
